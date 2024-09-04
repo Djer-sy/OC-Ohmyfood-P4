@@ -1,0 +1,107 @@
+/* Loading animation */
+
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  background-color: white;
+  animation: loading 3s ease-in-out forwards;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+.lettre {
+  color: #7e7e7e;
+  font-size: 100px;
+  letter-spacing: 15px;
+  margin-bottom: 150px;
+  font-family: "Shrikhand", serif;
+  animation: flash 1.5s linear infinite alternate;
+}
+
+@keyframes flash {
+  0% {
+    color: #9356dc;
+    text-shadow: 0px 0px 7px #99e2d0;
+    opacity: 1;
+  }
+  20% {
+    color: #e36d6d;
+    text-shadow: 0px 0px 7px #99e2d0;
+    opacity: 1;
+  }
+  30% {
+    color: #c3a4ba;
+    text-shadow: 0px 0px 7px #99e2d0;
+    opacity: 1;
+  }
+  60% {
+    color: #936987;
+    text-shadow: 0px 0px 7px #99e2d0;
+    opacity: 1;
+  }
+  70% {
+    color: #d357b0;
+    text-shadow: 0px 0px 7px #99e2d0;
+    opacity: 1;
+  }
+  80% {
+    color: #ff79da;
+    text-shadow: 0px 0px 7px #99e2d0;
+    opacity: 1;
+  }
+  90% {
+    color: #9570c2;
+    text-shadow: 0px 0px 7px #99e2d0;
+    opacity: 1;
+  }
+  100% {
+    color: #9356dc;
+
+    opacity: 0;
+  }
+}
+
+.lettre:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.lettre:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.lettre:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.lettre:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.lettre:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.lettre:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.lettre:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.lettre:nth-child(8) {
+  animation-delay: 0.8s;
+}
+.fondu-out {
+  opacity: 0;
+  transition: opacity 0.04s ease-out;
+}

@@ -1,0 +1,136 @@
+/* General */
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+/* Colors */
+
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+$gradient-color: rgb(171, 94, 220)
+  linear-gradient(0deg, rgba(171, 94, 220, 1) 0%, rgba(223, 111, 218, 1) 58%);
+
+/* Utils */
+
+.center {
+  text-align: center;
+}
+
+/* Titles */
+
+.title {
+  color: #000;
+  font-weight: 700;
+  &__main {
+    font-family: "Shrikhand", cursive;
+  }
+}
+
+/* Buttons */
+
+.btn {
+  color: #fff;
+  padding: 0.75rem 1rem;
+  background: $gradient-color;
+  font-weight: 400;
+  border: 0;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  cursor: pointer;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  transition: 0.25s;
+  outline: none;
+  &:hover {
+    filter: brightness(110%);
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+  background: white;
+  padding: 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  z-index: 2;
+  top: 0;
+  position: sticky;
+
+  h1 {
+    margin: 0;
+    cursor: default;
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* FOOTER */
+
+.white {
+  color: rgb(255, 255, 255);
+}
+.text-bottom {
+  display: flex;
+  flex-direction: column;
+}
+.footer-center {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  transition: all 0.2s ease-in-out;
+}
+.footer-center:hover {
+  transform: scale(1.01);
+}
+.icons {
+  font-size: 1rem;
+  color: #7e7e7e;
+}
+
+.footerPara {
+  margin-top: 0px;
+  text-decoration: none;
+  display: flex;
+}
+.roboto-small {
+  font-family: "Roboto";
+  font-weight: 300;
+}
+a {
+  color: #ffffff;
+}
+ul {
+  list-style-type: none;
+}
+
+li {
+  border: none;
+  background: transparent;
+}
+.icon {
+  margin-right: 10px;
+}
+
+footer {
+  background-color: #353535;
+  height: 100%;
+  padding-bottom: 10px;
+  margin-top: -40px;
+}
+h4 {
+  font-family: "Shrikhand", serif;
+  font-style: normal;
+  font-size: medium;
+  font-weight: 100;
+  margin-bottom: 0px;
+  margin-right: 40px;
+}
