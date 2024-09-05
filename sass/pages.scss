@@ -1,0 +1,249 @@
+/* Header */
+
+header {
+  i {
+    position: absolute;
+    left: 1.5rem;
+    height: 1rem;
+    width: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    color: #000;
+  }
+}
+
+/* Background image */
+
+.bg-image {
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+  .image-bg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Menu - Introduction */
+
+.menu {
+  margin-top: -4rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: rgb(238, 238, 238);
+  position: relative;
+  &__top {
+    padding: 0.5rem 2rem 0 1rem;
+    display: flex;
+    margin-top: -10rem;
+    align-items: center;
+    justify-content: center;
+    h2 {
+      font-family: "Shrikhand", cursive;
+      font-size: 1.7rem;
+      margin-right: 40px;
+    }
+    i {
+      margin-right: 2rem;
+    }
+  }
+  .menu-favorite {
+    height: 2rem;
+    width: 2rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    .icon-fill {
+      color: $color-primary;
+      opacity: 0;
+      margin: 0;
+      font-size: 1.6rem;
+      cursor: pointer;
+      transition: 0.2s linear;
+      position: absolute;
+      z-index: 2;
+      background: linear-gradient(
+        0deg,
+        rgba(171, 94, 220, 1) 0%,
+        rgba(223, 111, 218, 1) 58%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .icon-empty {
+      margin: 0;
+      color: $color-primary;
+      opacity: 1;
+      font-size: 1.6rem;
+      cursor: pointer;
+      transition: 0.2s linear;
+      position: absolute;
+    }
+    &:hover .icon-fill {
+      opacity: 1;
+    }
+    &:hover .icon-empty {
+      opacity: 0;
+    }
+  }
+}
+
+/* Menu content */
+
+.menus-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  /* Menus */
+  .menus {
+    margin-top: 2rem;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 1rem;
+    animation-name: apparition;
+    animation-fill-mode: forwards;
+    &:first-child {
+      margin: auto;
+      opacity: 0;
+      animation-delay: 0s;
+      animation-duration: 2s;
+    }
+    &:nth-child(2) {
+      margin: auto;
+      opacity: 0;
+      animation-delay: 0.3s;
+      animation-duration: 2s;
+    }
+    &:last-child {
+      margin: auto;
+      opacity: 0;
+      animation-delay: 0.6s;
+      animation-duration: 2s;
+    }
+    &__title {
+      position: relative;
+      text-transform: uppercase;
+      padding-bottom: 0.5rem;
+      font-weight: 400;
+      &::after {
+        content: "";
+        width: 3rem;
+        height: 0.2rem;
+        background-color: $color-tertiary;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+    }
+  }
+  /* Choice menu */
+  .choice-menu {
+    background-color: #fff;
+    padding: 1rem;
+    display: flex;
+    margin: 1rem 0;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+    width: 19.5rem;
+    cursor: pointer;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &__top {
+      overflow: hidden;
+      flex: 1;
+    }
+    &__title {
+      margin: 0;
+      overflow: hidden;
+      font-size: 1.1rem;
+      padding-bottom: 0.25rem;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    &__description {
+      margin: 0;
+      font-size: 0.9rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    &__price {
+      font-weight: 600;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+    &__okay {
+      background-color: $color-tertiary;
+      margin: -1rem -5rem -1rem 1rem;
+      width: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.5s;
+    }
+    &:hover .choice-menu__okay {
+      margin-right: -1rem;
+    }
+    &__icon {
+      height: 1.5rem;
+      width: 1.5rem;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100px;
+    }
+    &:hover .choice-menu__icon {
+      animation-duration: 0.8s;
+      animation-name: rotation;
+    }
+    &__icons {
+      color: $color-tertiary;
+    }
+  }
+}
+
+/* Command button */
+
+.command-btn {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  padding: 3rem 0;
+  .btn {
+    width: 12rem;
+    height: 3rem;
+  }
+}
+/* Footer */
+footer span {
+  font-family: "Shrikhand", serif;
+  font-style: normal;
+  font-size: medium;
+  font-weight: 100;
+  margin-bottom: -25px;
+  margin-right: 0px;
+  margin-top: 40px;
+}
+/* Desktop */
+@media all and (min-width: 1024px) {
+  footer span {
+    font-family: "Shrikhand", serif;
+    font-style: normal;
+    font-size: medium;
+    font-weight: 100;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-top: 10px;
+  }
+  .choice-menu {
+    width: 39.625rem !important;
+  }
+}

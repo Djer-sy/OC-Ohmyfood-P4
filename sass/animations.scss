@@ -105,3 +105,26 @@
   opacity: 0;
   transition: opacity 0.04s ease-out;
 }
+/* Animation for icon confirmation pages menus */
+
+@keyframes rotation {
+  from {
+    transform: rotate(-540deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* Gradual onset menus */
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(1.6rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

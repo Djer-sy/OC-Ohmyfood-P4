@@ -121,15 +121,6 @@ footer {
   margin-top: -40px;
 }
 
-h4 {
-  font-family: "Shrikhand", serif;
-  font-style: normal;
-  font-size: medium;
-  font-weight: 100;
-  margin-bottom: 0px;
-  margin-right: 40px;
-}
-
 /* Loading page (dots effect) */
 #loader {
   position: absolute;
@@ -442,20 +433,20 @@ footer {
   height: 100%;
 }
 
-h4 {
-  font-family: "Shrikhand", serif;
-  font-style: normal;
-  font-size: medium;
-  font-weight: 100;
-  margin-bottom: -30px;
-  margin-right: 0px;
-  padding-top: 0px;
-}
-
 .text-bottom {
   display: flex;
   margin-bottom: 20px;
   justify-content: flex-start;
+}
+
+footer span {
+  font-family: "Shrikhand", serif;
+  font-style: normal;
+  font-size: medium;
+  font-weight: 100;
+  margin-bottom: -20px;
+  margin-right: 0px;
+  margin-top: 20px;
 }
 
 /* DESKTOP VERSION */
@@ -497,9 +488,10 @@ h4 {
 
   .text-bottom {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: -54px;
     margin-right: -100px;
     justify-content: flex-start;
+    margin-top: 60px;
   }
 
   .menu-restaurants {
@@ -513,14 +505,13 @@ h4 {
     margin: 0 2rem;
   }
 
-  h4 {
+  footer span {
     font-family: "Shrikhand", serif;
     font-style: normal;
     font-size: medium;
     font-weight: 100;
-    margin-bottom: -75px;
+    margin-bottom: 0px;
     margin-right: 0px;
-    padding-top: 30px;
   }
 
   /* Normal desktop version */
@@ -560,6 +551,247 @@ h4 {
     min-width: 18rem;
     width: 100%;
     margin: 0 2rem;
+  }
+}
+/* Header */
+header i {
+  position: absolute;
+  left: 1.5rem;
+  height: 1rem;
+  width: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.3rem;
+  color: #000;
+}
+
+/* Background image */
+.bg-image {
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+}
+.bg-image .image-bg {
+  width: 100%;
+  height: auto;
+}
+
+/* Menu - Introduction */
+.menu {
+  margin-top: -4rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #eeeeee;
+  position: relative;
+}
+.menu__top {
+  padding: 0.5rem 2rem 0 1rem;
+  display: flex;
+  margin-top: -10rem;
+  align-items: center;
+  justify-content: center;
+}
+.menu__top h2 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.7rem;
+  margin-right: 40px;
+}
+.menu__top i {
+  margin-right: 2rem;
+}
+.menu .menu-favorite {
+  height: 2rem;
+  width: 2rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.menu .menu-favorite .icon-fill {
+  color: #9356dc;
+  opacity: 0;
+  margin: 0;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: 0.2s linear;
+  position: absolute;
+  z-index: 2;
+  background: linear-gradient(0deg, #ab5edc 0%, #df6fda 58%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu .menu-favorite .icon-empty {
+  margin: 0;
+  color: #9356dc;
+  opacity: 1;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: 0.2s linear;
+  position: absolute;
+}
+.menu .menu-favorite:hover .icon-fill {
+  opacity: 1;
+}
+.menu .menu-favorite:hover .icon-empty {
+  opacity: 0;
+}
+
+/* Menu content */
+.menus-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  /* Menus */
+  /* Choice menu */
+}
+.menus-content .menus {
+  margin-top: 2rem;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 1rem;
+  animation-name: apparition;
+  animation-fill-mode: forwards;
+}
+.menus-content .menus:first-child {
+  margin: auto;
+  opacity: 0;
+  animation-delay: 0s;
+  animation-duration: 2s;
+}
+.menus-content .menus:nth-child(2) {
+  margin: auto;
+  opacity: 0;
+  animation-delay: 0.3s;
+  animation-duration: 2s;
+}
+.menus-content .menus:last-child {
+  margin: auto;
+  opacity: 0;
+  animation-delay: 0.6s;
+  animation-duration: 2s;
+}
+.menus-content .menus__title {
+  position: relative;
+  text-transform: uppercase;
+  padding-bottom: 0.5rem;
+  font-weight: 400;
+}
+.menus-content .menus__title::after {
+  content: "";
+  width: 3rem;
+  height: 0.2rem;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.menus-content .choice-menu {
+  background-color: #fff;
+  padding: 1rem;
+  display: flex;
+  margin: 1rem 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  width: 19.5rem;
+  cursor: pointer;
+}
+.menus-content .choice-menu:last-child {
+  margin-bottom: 0;
+}
+.menus-content .choice-menu__top {
+  overflow: hidden;
+  flex: 1;
+}
+.menus-content .choice-menu__title {
+  margin: 0;
+  overflow: hidden;
+  font-size: 1.1rem;
+  padding-bottom: 0.25rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menus-content .choice-menu__description {
+  margin: 0;
+  font-size: 0.9rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menus-content .choice-menu__price {
+  font-weight: 600;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.menus-content .choice-menu__okay {
+  background-color: #99e2d0;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+.menus-content .choice-menu:hover .choice-menu__okay {
+  margin-right: -1rem;
+}
+.menus-content .choice-menu__icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+}
+.menus-content .choice-menu:hover .choice-menu__icon {
+  animation-duration: 0.8s;
+  animation-name: rotation;
+}
+.menus-content .choice-menu__icons {
+  color: #99e2d0;
+}
+
+/* Command button */
+.command-btn {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  padding: 3rem 0;
+}
+.command-btn .btn {
+  width: 12rem;
+  height: 3rem;
+}
+
+/* Footer */
+footer span {
+  font-family: "Shrikhand", serif;
+  font-style: normal;
+  font-size: medium;
+  font-weight: 100;
+  margin-bottom: -25px;
+  margin-right: 0px;
+  margin-top: 40px;
+}
+
+/* Desktop */
+@media all and (min-width: 1024px) {
+  footer span {
+    font-family: "Shrikhand", serif;
+    font-style: normal;
+    font-size: medium;
+    font-weight: 100;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-top: 10px;
+  }
+
+  .choice-menu {
+    width: 39.625rem !important;
   }
 }
 /* Loading animation */
@@ -672,6 +904,27 @@ h4 {
 .fondu-out {
   opacity: 0;
   transition: opacity 0.04s ease-out;
+}
+
+/* Animation for icon confirmation pages menus */
+@keyframes rotation {
+  from {
+    transform: rotate(-540deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+/* Gradual onset menus */
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(1.6rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
