@@ -392,7 +392,6 @@ footer {
 .menu-restaurants a {
   min-width: 12rem;
   width: 100%;
-  margin: 0 2rem;
 }
 
 /* Footer */
@@ -501,8 +500,6 @@ footer span {
   }
   .menu-restaurants a {
     min-width: 12rem;
-    width: 100%;
-    margin: 0 2rem;
   }
 
   footer span {
@@ -527,8 +524,6 @@ footer span {
 
   .menu-restaurants a {
     min-width: 16rem;
-    width: 100%;
-    margin: 0 2rem;
   }
 }
 @media all and (min-width: 1024px) {
@@ -549,8 +544,6 @@ footer span {
 
   .menu-restaurants a {
     min-width: 18rem;
-    width: 100%;
-    margin: 0 2rem;
   }
 }
 /* Header */
@@ -648,7 +641,7 @@ header i {
 }
 .menus-content .menus {
   margin-top: 2rem;
-  max-width: 100%;
+  max-width: 80%;
   overflow: hidden;
   padding: 0 1rem;
   animation-name: apparition;
@@ -695,7 +688,7 @@ header i {
   border-radius: 0.75rem;
   overflow: hidden;
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
-  width: 19.5rem;
+  width: 90%;
   cursor: pointer;
 }
 .menus-content .choice-menu:last-child {
